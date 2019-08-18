@@ -1,0 +1,54 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["airbnb", "plugin:react-native/all"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-native", "jsx-a11y", "import", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react/self-closing-comp": 1,
+    "arrow-body-style": "off",
+    "semi": ["warn", "never"],
+    "quotes": ["warn", "double"],
+    "comma-dangle": ["warn", "never"],
+    "react-native/no-inline-styles": 1,
+    "react-native/no-unused-styles": 1,
+    "react/jsx-one-expression-per-line": "off",
+    "react-native/no-color-literals": "off",
+    "react-native/sort-styles": "off",
+    "global-require": "off",
+    "react-native/no-raw-text": "off",
+    "max-len": ["warn", { "code": 80 }],
+    "indent": "warn",
+    "arrow-parens": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": { "rootPathSuffix": "src" },
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
